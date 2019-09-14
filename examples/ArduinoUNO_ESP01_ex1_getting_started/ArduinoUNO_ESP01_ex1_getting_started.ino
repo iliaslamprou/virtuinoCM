@@ -135,10 +135,10 @@ String onRequested(char variableType, uint8_t variableIndex){
                 cipSend += "\r\n";
                 while(espSerial.available()) espSerial.read();    // clear espSerial buffer 
                 for (int i=0;i<cipSend.length();i++) espSerial.write(cipSend.charAt(i));
-                if (waitForResponse(">",1000)) espSerial.println(*response);
+                if (waitForResponse(">",1000)) espSerial.print(*response);
                 waitForResponse("OK",1000);
               }
-              espSerial.print("AT+CIPCLOSE=");espSerial.print(connectionId);
+              espSerial.print("AT+CIPCLOSE=");espSerial.println(connectionId);
          }// (pos!=-1)
            
   } // if espSerial.available
