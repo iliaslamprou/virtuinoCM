@@ -1,6 +1,6 @@
 /* Example: ENC28J60 getting started
  * Created by Ilias Lamprou
- * Modified: Sep/9/2019
+ * Modified: Sep/27/2019
  */
 
 //-------------UIPEthernet Library and settings --------------
@@ -86,7 +86,7 @@ String onRequested(char variableType, uint8_t variableIndex){
 }
 
 //============================================================== virtuinoRun
-  void virtuinoRun(){
+ void virtuinoRun(){
   EthernetClient client = server.available();
   if (client) {
     if (debug) Serial.println("Connected");
@@ -98,8 +98,10 @@ String onRequested(char variableType, uint8_t variableIndex){
         if (debug) Serial.write(c);
       }
      String* response= virtuino.getResponse();    // get the text that has to be sent to Virtuino as reply. The library will check the inptuBuffer and it will create the response text
-     if (debug) Serial.println("\nResponse : "+*response);
-     client.print(*response);
+     if (response->length()>0) {
+        if (debug) Serial.println("\nResponse : "+*response);
+        client.print(*response);
+     }
      client.stop(); 
     }
     if (debug) Serial.println("Disconnected");
