@@ -1,4 +1,4 @@
-/* VirtuinoCM library ver 1.0.0
+/* VirtuinoCM library ver 1.0.02
  * Created by Ilias Lamprou
  * Updated Sep 10 2019
  * Download latest Virtuino android app from the link: https://play.google.com/store/apps/details?id=com.virtuino_automations.virtuino
@@ -9,7 +9,7 @@
 
 #include "Arduino.h"
 
-#define CM_WELCOME_MESSAGE  "!C=VirtuinoCM 1.0.0" 
+#define CM_WELCOME_MESSAGE  "!C=VirtuinoCM 1.0.02" 
 #define CM_START_CHAR '!'                 // All Virtuino commands starts with !
 #define CM_END_CHAR   '$'                 // All Virtuino commands ends with $
 #define CM_ERROR  "E00=7$"           

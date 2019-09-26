@@ -1,4 +1,4 @@
-/* VirtuinoCM library ver 1.0.0
+/* VirtuinoCM library ver 1.0.02
  * Created by Ilias Lamprou
  * Updated Sep 10 2019
  * Download latest Virtuino android app from the link: https://play.google.com/store/apps/details?id=com.virtuino_automations.virtuino
